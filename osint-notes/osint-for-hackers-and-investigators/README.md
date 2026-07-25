@@ -51,3 +51,19 @@
     - BetaMeta
     - dotDB
     - Dark Web
+- 08-browser-plugins.md
+    - SurfSafe
+    - Video DownloadHelper
+    - FireShot
+    - Nimbus
+    - User-Agent Switcher
+    - Web Page Downloader
+    - Start.me website
+- 09-social-media.md
+    - Facebook Sock Puppet Account
+    - Twitter / X 
+    - Bypassing Youtube Login Requirement
+    - Maigret
+    - Youtube Dataviewer
+    - Profil3r
+    - Bluesky

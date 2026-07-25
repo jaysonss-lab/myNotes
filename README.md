@@ -45,3 +45,5 @@
     - 05-reverse-searching.md
     - 06-people-searching.md
     - 07-website-osint.md
+    - 08-browser-plugins.md
+    - 09-social-media.md
