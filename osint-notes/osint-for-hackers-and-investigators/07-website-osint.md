@@ -89,3 +89,32 @@ HTTrack is an open-source website crawler and archiver. Available as both a comm
 - is a specialized big data search engine and SaaS platform **designed for researching, tracking, and valuing domain names** across multiple extensions (TLDs).
 - enables users to gauge market demand, monitor keyword trends, generate live website snapshots, and track domain portfolio changes. 
 - **Access it here:** https://dotdb.com/
+
+<br>
+<br>
+<br>
+
+## Dark Web
+**The dark web is a hidden network of websites that cannot be found by search engines and requires specialized software to access.** It is built entirely around **anonymity and privacy**, encrypting connections so that the identities and locations of both the users and the website creators remain masked.
+
+### The Three Layers of the Internet
+To truly understand the dark web, it helps to look at how the entire internet is structured, often compared to an iceberg:
+
+- **The Surface Web (~5%):** This is the visible layer you use every day. It includes sites indexed by search engines like Google, such as news outlets, social media platforms, and online shops.
+
+- **The Deep Web (~90–95%):** This refers to any internet content hidden behind a login wall, paywall, or encryption. It is massive and includes routine items like your personal email inbox, online banking portals, and corporate databases.
+
+- **The Dark Web (<1%):** This is a very tiny, intentional subset of the deep web. It cannot be reached using a standard browser like Chrome or Safari, and its websites use unconventional domains (most commonly ending in `.onion` rather than `.com`).
+
+### How It Works
+- The dark web runs on **"darknets"**—overlay networks that operate on top of the standard internet but use complex encryption.
+- The most popular network is called **Tor (The Onion Router)**. When a person browses via Tor, their connection is wrapped in multiple layers of encryption and bounced through a random path of servers across the globe. This "onion routing" technique strips away identifying information (like your IP address), making it incredibly difficult for anyone to track your digital footprint.
+
+### Who Uses It?
+Because it is built on dual-use technology, it attracts a diverse mix of people for both noble and criminal reasons:
+
+- **The Illicit Side:** The anonymity naturally attracts cybercriminals. It houses underground marketplaces where bad actors buy and sell stolen data, hacked credentials, illegal substances, and malware.
+
+- **The Legitimate Side:** It is a vital tool for privacy advocates, journalists, and whistleblowers. People living under strict, oppressive political regimes use the dark web to safely bypass internet censorship and report news without fear of government tracking. Even major platforms like the BBC or secure email providers run `.onion` mirror sites to ensure free information access globally.
+
+Simply visiting the dark web is legal in most jurisdictions, but engaging in any illegal activity there carries heavy security and law enforcement risks.
