@@ -67,3 +67,5 @@
     - Youtube Dataviewer
     - Profil3r
     - Bluesky
+- 10-miscellaneous.md
+    - Maltego

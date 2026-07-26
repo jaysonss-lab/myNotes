@@ -47,3 +47,4 @@
     - 07-website-osint.md
     - 08-browser-plugins.md
     - 09-social-media.md
+    - 10-miscellaneous.md
