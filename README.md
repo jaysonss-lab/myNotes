@@ -37,14 +37,4 @@
 - sql-for-de.md
 
 ## osint-notes
-- osint-for-hackers-and-investigators
-    - 01-introduction.md
-    - 02-sock-puppets.md
-    - 03-data-collection.md
-    - 04-advanced-searching.md
-    - 05-reverse-searching.md
-    - 06-people-searching.md
-    - 07-website-osint.md
-    - 08-browser-plugins.md
-    - 09-social-media.md
-    - 10-miscellaneous.md
+- osint-for-investigators.md

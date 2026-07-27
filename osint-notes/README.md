@@ -1,7 +1,7 @@
 # My OSINT Notes
 
-## osint-for-hackers-and-investigators
-- 01-introduction.md
+## osint-for-investigators.md
+1. Introduction
     - What is OSINT?
     - Mental Preparation
     - OSINT Steps
@@ -9,7 +9,7 @@
     - Ask...
     - Crossing the line
     - Documents
-- 02-sock-puppets.md
+2. Sock Puppets
     - Basics
     - Sock Puppet Gmail
     - MySudo
@@ -17,13 +17,13 @@
     - textnow.com
     - Temp mail
     - CSI Linux Sock Puppets
-- 03-data-collection.md
+3. Data Collection
     - Handling Data
     - CherryTree
     - Obsidian
     - Joplin
     - Keeping your Data Safe
-- 04-advanced-searching.md
+4. Advanced Searching
     - The Ultimate OSINT Research Resource
     - Google Dorking
     - Google Maps
@@ -31,11 +31,11 @@
     - Google Alerts
     - Geolocation
     - Greynoise
-- 05-reverse-searching.md
+5. Reverse Searching
     - Reverse Email
     - Reverse Phone
     - Deep Fake Detection
-- 06-people-searching.md
+6. People Searching
     - Black Book Online
     - DeHashed
     - Have I Been Pwned
@@ -43,7 +43,7 @@
     - Linkedin
     - Family Tree
     - Unmask Google Users Using Google Docs
-- 07-website-osint.md
+7. Website Osint
     - Spiderfoot
     - wget and HTTrack
     - Metagoofil
@@ -51,7 +51,7 @@
     - BetaMeta
     - dotDB
     - Dark Web
-- 08-browser-plugins.md
+8. Various Browser Plugins
     - SurfSafe
     - Video DownloadHelper
     - FireShot
@@ -59,7 +59,7 @@
     - User-Agent Switcher
     - Web Page Downloader
     - Start.me website
-- 09-social-media.md
+9. Social Media
     - Facebook Sock Puppet Account
     - Twitter / X 
     - Bypassing Youtube Login Requirement
@@ -67,5 +67,9 @@
     - Youtube Dataviewer
     - Profil3r
     - Bluesky
-- 10-miscellaneous.md
+10. Miscellaneous
     - Maltego
+    - OSIRT
+    - ExifTool
+    - Canary Tokens
+    - Bitcoin Address Lookup
