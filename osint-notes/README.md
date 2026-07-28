@@ -1,5 +1,8 @@
 # My OSINT Notes
 
+## osint-by-zsecurity.md
+1. Search Engines
+
 ## osint-for-investigators.md
 1. Introduction
     - What is OSINT?
