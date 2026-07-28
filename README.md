@@ -39,5 +39,6 @@
 ## osint-notes
 - learn-osint-from-scratch
     - 01-search-engines.md
+    - 02-database-breaches-and-leaks.md
 - osint-for-investigators
     - osint-for-investigators.md

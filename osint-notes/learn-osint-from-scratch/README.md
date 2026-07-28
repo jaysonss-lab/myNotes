@@ -9,4 +9,8 @@
     - Baidu
     - Intel Techniques
 
+## 02-database-breaches-and-leaks.md
+- Database Breaches & Leaks - Finding Passwords, Emails, Locations + More!
+- Downloading Leak / Breach Databases
+
 
