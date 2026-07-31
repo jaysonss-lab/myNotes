@@ -13,4 +13,7 @@
 - Database Breaches & Leaks - Finding Passwords, Emails, Locations + More!
 - Downloading Leak / Breach Databases
 
-
+## 03-sock-puppet.md
+- Why to use sock puppet account in VM?
+- Setup your VM
+- Creating an Untraceable Covert Account
