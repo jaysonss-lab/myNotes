@@ -250,4 +250,91 @@
 
 ![alt text](images/04-socmint/2026-08-01_21-18.png)
 
+<br>
+<br>
+<br>
 
+# Twitter OSINT
+
+## Extracting X / Twitter User IDs
+
+### Analyze the target profile
+
+![alt text](images/04-socmint/2026-08-01_21-32.png)
+
+### Search for an Account
+- You can confirm your target's account with the help of your gathered research (from previous topics).
+
+![alt text](images/04-socmint/2026-08-01_21-36.png)
+
+### Find the User ID
+- Go to your target's twitter page.
+- `Right-click -> Inspect`
+- Search for `/profile_banners/`
+
+![alt text](images/04-socmint/2026-08-01_21-41.png)
+
+- Or search for `identifier`
+
+![alt text](images/04-socmint/2026-08-01_21-46.png)
+
+- Or use this website: https://commentpicker.com/twitter-id.php
+
+### Track the Target using User ID
+- Use this URL: `https://twitter.com/intent/user?user_id=147812602`
+- Or use this URL: `https://twitter.com/i/user/147812602`
+
+<br>
+
+## Recovering Deleted Tweets and Timestamps
+### To get the timestamp of a post or comment:
+- `Right-click -> Inspect` the date.
+
+![alt text](images/04-socmint/2026-08-01_22-32.png)
+
+![alt text](images/04-socmint/2026-08-01_22-35.png)
+
+- To convert it on your local time, you can use this website: https://www.timestamp-converter.com/, then paste it on the `ISO 8601` section.
+
+### Indexed Tweets
+- Utilize search engine operators to discover indexed tweets.
+- Examples:
+    - `site:x.com "cyber_sudo"`
+    - `site:x.com "@cyber_sudo"`
+    - `site:x.com/cyber_sudo/status`
+
+<br>
+
+## Leveraging Search Operators to Find Specific Tweets
+- `from:` - will display all tweets from @X
+    - Example: To see all tweets from username: `_zsecurity_`, search for: `from:_zsecurity_`
+    - Example: To see all tweets from username: `_zsecurity_` with keyword `email`, search for: `from:_zsecurity_ email`
+
+- `from:` + `to:` - if we would like to see any connection or any tweets from a certain account to another
+    - Example: `from:cyber_sudo to:_zsecurity_`
+
+- `since:`yyyy-mm-dd
+- `until:`yyyy-mm-dd
+    - Example: To see all tweets from the username: `cyber_sudo` from `2024-01-01` to `2024-01-15`, search for: `from:cyber_sudo since:2024-01-01 until:2024-01-15`
+
+<br>
+
+## Discovering Tweets Posted from a Specific Location
+- `geocode:` - restrict your search by a given location
+    - Format: latitude,longitude,radius
+    - To get the latitude and longitude of a certain location, go to **google maps**, then right-click the location that you need. Click the coordinates to copy it to your clipboard.
+
+    ![alt text](images/04-socmint/2026-08-01_23-14.png)
+
+    - Example: If you want to see all the tweets from this location within a radius of 5km and related to keyword "osint", go to twitter search bar: `geocode:41.15827,-8.62937,5km "osint"`
+
+<br>
+
+## Other Search Operators
+- `@` - used to find if an account has mentioned another x account
+    - Example: `from:_zsecurity_ @cyber_sudo`
+- `filter:` media, replies, retweets
+    - Example: `from:_zsecurity_ filter:media` to see all the media from the username: `_zsecurity_`
+    - Example: `from:_zsecurity_ -filter:replies` to see all the tweets EXCEPT for replies
+- `OR`
+    - Example: `from:_zsecurity_ "osint" OR "cybersecurity"` to see all the tweets from the username: `_zsecurity_` with the keywords "osint" OR "cybersecurity"
