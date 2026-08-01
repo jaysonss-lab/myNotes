@@ -17,3 +17,10 @@
 - Why to use sock puppet account in VM?
 - Setup your VM
 - Creating an Untraceable Covert Account
+
+## 04-socmint.md
+- Facebook OSINT
+- Instagram OSINT
+- Twitter OSINT
+- LinkedIn OSINT
+- Other Social Media OSINT
