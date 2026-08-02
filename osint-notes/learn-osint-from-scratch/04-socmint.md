@@ -338,3 +338,157 @@
     - Example: `from:_zsecurity_ -filter:replies` to see all the tweets EXCEPT for replies
 - `OR`
     - Example: `from:_zsecurity_ "osint" OR "cybersecurity"` to see all the tweets from the username: `_zsecurity_` with the keywords "osint" OR "cybersecurity"
+
+<br>
+<br>
+<br>
+
+# LinkedIn OSINT
+
+## Discovering and Analysing LinkedIn Profiles
+
+### Search Filters
+- You can narrow down your search by using the **filters**. Click on **All filters** to see all of them.
+
+![alt text](images/04-socmint/2026-08-02_17-21.png)
+
+### Download Information
+- LinkedIn makes it very easy for us to download someone's profile.
+- Click on **More** then **Save to PDF**
+
+![alt text](images/04-socmint/2026-08-02_17-49.png)
+
+<br>
+
+## Finding Hidden Names & Extracting Post Timestamps
+
+### Timestamps
+
+#### How to Get Post Timestamp
+1. Get the Post ID.
+
+![alt text](images/04-socmint/2026-08-02_17-56.png)
+
+2. Convert it to binary using this website: https://www.rapidtables.com/convert/number/decimal-to-binary.html
+
+3. Convert the **first 42** binary digits to decimal. https://www.rapidtables.com/convert/number/binary-to-decimal.html
+
+4. Get the result then convert it using this website: https://www.unixtimestamp.com/
+
+#### How to Get Comment Timestamp
+1. Click the 3 dots then **Copy link to comment**
+
+![alt text](images/04-socmint/2026-08-02_18-12.png)
+
+2. Copy the highlighted number.
+
+![alt text](images/04-socmint/2026-08-02_18-14.png)
+
+3. Repeat **steps 2 to 4**.
+
+#### Shortcut Process of Getting the Timestamps
+1. Copy the URL of the post.
+2. Go to this website: https://dfir.blog/unfurl/ then paste the URL.
+
+<br>
+
+### Find Redacted Names
+- LinkedIn censors or hides the names of some company employees.
+- Example:
+1. Search for `zsecurity`, then from the results, click its company page.
+2. Click `People`, notice that some members are hidden.  Nothing will happen even if you click on it.
+
+![alt text](images/04-socmint/2026-08-02_18-36.png)
+
+3. Try finding it in a search engine (like Google) using this format: `site:linkedin.com "job description"`
+    - Example: `site:linkedin.com "Ethical Hacker at zSecurity"`
+
+<br>
+
+## Finding LinkedIn Profile Member IDs
+1. Go to the target's linkedin profile page.
+2. `Right-click -> View Page Source`
+3. `ctrl + F` then search for `member:`
+
+![alt text](images/04-socmint/2026-08-02_19-30.png)
+
+**Note:** Be careful as your own member ID will also show in here. Make sure that you have copied your target's member ID and not yours.
+
+<br>
+<br>
+<br>
+
+# Other Social Media OSINT
+
+## Snapchat OSINT - Downloading Stories & Extracting Metadata
+
+### How to Download Stories
+
+#### Manual Process
+1. Go to your target's snapchat page.
+2. `Right-click -> Inspect`
+3. Go to **Network** tab, then select **Media**
+
+![alt text](images/04-socmint/2026-08-02_22-10.png)
+
+4. Click and play all the videos to populate the URLs.
+5. Click the URL to show the video, the `right-click -> Save Video As...`
+
+#### Shortcut Process
+1. Go to this website: https://z.storyclone.com/
+2. Paste the URL profile of your target.
+3. To convert the time from UTC to your target's local time, you can use this website: https://savvytime.com/converter
+
+### How to Get your Target's Snapcode
+Use this URL: `https://app.snapchat.com/web/deeplink/snapcode?username=USERNAME&type=SVG` but replace the `USERNAME` by your target's snapchat username.
+
+![alt text](images/04-socmint/2026-08-02_22-57.png)
+
+<br>
+
+## TikTok OSINT - Downloading Videos, Extracting Timestamps, Metadata & More
+
+### Analyze the target profile
+- Copy the important details.
+- Save the target's profile picture.
+
+### Timestamps
+
+#### Post Timestamp
+1. Get the Post ID in the URL (highlighted below).
+
+![alt text](images/04-socmint/2026-08-02_23-32.png)
+
+2. Convert it to binary using this website: https://www.rapidtables.com/convert/number/decimal-to-binary.html
+
+3. Convert the **first 32** binary digits to decimal. https://www.rapidtables.com/convert/number/binary-to-decimal.html
+
+4. Get the result then convert it using this website: https://www.unixtimestamp.com/
+
+#### Comment Timestamp
+1. `Right-click -> Inspect` on the comment.
+
+![alt text](images/04-socmint/2026-08-02_23-37.png)
+
+2. Repeat **steps 2 to 4**.
+
+#### Shortcut Method to Get the Post or Comment Timestamp
+- Go to this website: https://dfir.blog/unfurl/ then paste the ID number or the URL.
+
+### Download Videos Manually
+1. Go to your target's tiktok page.
+2. `Right-click -> Inspect`
+3. Go to **Network** tab, then select **Media**
+4. Click the videos to populate the URLs.
+5. Click the URL to show the video, the `right-click -> Save Video As...`
+
+### Extract Metadata
+1. Go to your target's tiktok page.
+2. `Right-click -> Inspect` anywhere.
+3. Copy all the metadata from this **UNIVERSAL_DATA_FOR_REHYDRATION** section.
+
+![alt text](images/04-socmint/2026-08-02_23-51.png)
+
+4. Paste it in a notepad, and save it as a JSON file (.json file extension)
+5. Open the json file with your browser. Then click **Expand All**
+6. From this metadata you can see the **region** where the account is created, a **high resolution of the profile pic**, etc.
