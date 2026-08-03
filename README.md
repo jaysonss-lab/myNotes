@@ -42,5 +42,6 @@
     - 02-database-breaches-and-leaks.md
     - 03-sock-puppet.md
     - 04-socmint.md
+    - 05-username.md
 - osint-for-investigators
     - osint-for-investigators.md
