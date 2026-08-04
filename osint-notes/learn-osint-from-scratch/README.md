@@ -27,3 +27,6 @@
 
 ## 05-username.md
 - Tracking Online Identities
+
+## 06-people.md
+- Uncovering Personal Information Online

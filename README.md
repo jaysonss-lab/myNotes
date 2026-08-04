@@ -43,5 +43,6 @@
     - 03-sock-puppet.md
     - 04-socmint.md
     - 05-username.md
+    - 06-people.md
 - osint-for-investigators
     - osint-for-investigators.md
