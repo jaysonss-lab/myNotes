@@ -30,3 +30,7 @@
 
 ## 06-people.md
 - Uncovering Personal Information Online
+
+## 07-email.md
+- Finding Email Addresses
+- Discovering Info Linked to an Email Address
