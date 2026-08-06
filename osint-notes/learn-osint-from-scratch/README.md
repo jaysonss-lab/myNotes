@@ -34,3 +34,7 @@
 ## 07-email.md
 - Finding Email Addresses
 - Discovering Info Linked to an Email Address
+
+## 08-phone-number.md
+- Discovering Phone Numbers
+- Finding Details Behind a Number

@@ -45,6 +45,6 @@
     - 05-username.md
     - 06-people.md
     - 07-email.md
-
+    - 08-phone-number.md
 - osint-for-investigators
     - osint-for-investigators.md
