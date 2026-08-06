@@ -38,3 +38,8 @@
 ## 08-phone-number.md
 - Discovering Phone Numbers
 - Finding Details Behind a Number
+
+## 09-image.md
+- Reverse Image Search
+- Facial Recognition
+- Geo Location Tracking
