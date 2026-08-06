@@ -47,5 +47,6 @@
     - 07-email.md
     - 08-phone-number.md
     - 09-image.md
+    - 10-maps.md
 - osint-for-investigators
     - osint-for-investigators.md

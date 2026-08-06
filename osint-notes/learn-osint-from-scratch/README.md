@@ -43,3 +43,6 @@
 - Reverse Image Search
 - Facial Recognition
 - Geo Location Tracking
+
+## 10-maps.md
+- Using Maps for Geolocation Analysis
