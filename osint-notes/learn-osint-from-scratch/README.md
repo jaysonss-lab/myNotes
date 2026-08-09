@@ -50,3 +50,6 @@
 ## 11-website.md
 - Analyzing Website Data for Intelligence
 - Website OSINT with OSINT TraceLabs VM
+
+## 12-reporting.md
+- Structured open-source findings to the client
