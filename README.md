@@ -4,58 +4,73 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 
 ---
 
-## git-notes
-- essentials.md
+## 🗺️ Table of Contents
+* [Git Notes](#-git-notes)
+* [VS Code Notes](#-vscode-notes)
+* [Python Notes](#-python-notes)
+* [Web Fundamentals Notes](#-web-fundamentals-notes)
+* [Playwright Notes](#-playwright-notes)
+* [Docker Notes](#-docker-notes)
+* [Gemini Notes](#-gemini-notes)
+* [Data Engineering Notes](#-data-engr-notes)
+* [SQL Notes](#-sql-notes)
+* [OSINT Notes](#-osint-notes)
 
-## vscode-notes
-- note-taking.md
+---
 
-## python-notes
-- essentials.md
-- data-and-apis.md
-- code-safety-and-testing.md
+## 🛠️ Git Notes
+* [essentials.md](./git-notes/essentials.md)
 
-## web-fundamentals-notes
-- http.md
-- html-css.md
-- chrome-devtools.md
-- auth.md
+## 💻 VS Code Notes
+* [note-taking.md](./vscode-notes/note-taking.md)
 
-## playwright-notes
-- playwright-with-python-and-pytest
-    - 01-setup-env-and-writing-tests.md
-    - 02-built-in-locators.md
-    - 03-css-locators.md
-    - 04-xpath-locators.md
+## 🐍 Python Notes
+* [essentials.md](./python-notes/essentials.md)
+* [data-and-apis.md](./python-notes/data-and-apis.md)
+* [code-safety-and-testing.md](./python-notes/code-safety-and-testing.md)
 
-## docker-notes
-- docker-hands-on-devops.md
+## 🌐 Web Fundamentals Notes
+* [http.md](./web-fundamentals-notes/http.md)
+* [html-css.md](./web-fundamentals-notes/html-css.md)
+* [chrome-devtools.md](./web-fundamentals-notes/chrome-devtools.md)
+* [auth.md](./web-fundamentals-notes/auth.md)
 
-## gemini-notes
-- basics.md
+## 🎭 Playwright Notes
+### Playwright with Python and Pytest
+* [01-setup-env-and-writing-tests.md](./playwright-notes/playwright-with-python-and-pytest/01-setup-env-and-writing-tests.md)
+* [02-built-in-locators.md](./playwright-notes/playwright-with-python-and-pytest/02-built-in-locators.md)
+* [03-css-locators.md](./playwright-notes/playwright-with-python-and-pytest/03-css-locators.md)
+* [04-xpath-locators.md](./playwright-notes/playwright-with-python-and-pytest/04-xpath-locators.md)
 
-## data-engr-notes
-- fundamentals.md
+## 🐳 Docker Notes
+* [docker-hands-on-devops.md](./docker-notes/docker-hands-on-devops.md)
 
-## sql-notes
-- sql-for-de.md
+## ♊ Gemini Notes
+* [basics.md](./gemini-notes/basics.md)
 
-## osint-notes
-- learn-osint-from-scratch
-    - 01-search-engines.md
-    - 02-database-breaches-and-leaks.md
-    - 03-sock-puppet.md
-    - 04-socmint.md
-    - 05-username.md
-    - 06-people.md
-    - 07-email.md
-    - 08-phone-number.md
-    - 09-image.md
-    - 10-maps.md
-    - 11-website.md
-    - 12-reporting.md
-- osint-for-investigators
-    - osint-for-investigators.md
+## 📊 Data Engr Notes
+* [fundamentals.md](./data-engr-notes/fundamentals.md)
+
+## 🗄️ SQL Notes
+* [sql-for-de.md](./sql-notes/sql-for-de.md)
+
+## 🔍 OSINT Notes
+### Learn OSINT from Scratch
+* [01-search-engines.md](./osint-notes/learn-osint-from-scratch/01-search-engines.md)
+* [02-database-breaches-and-leaks.md](./osint-notes/learn-osint-from-scratch/02-database-breaches-and-leaks.md)
+* [03-sock-puppet.md](./osint-notes/learn-osint-from-scratch/03-sock-puppet.md)
+* [04-socmint.md](./osint-notes/learn-osint-from-scratch/04-socmint.md)
+* [05-username.md](./osint-notes/learn-osint-from-scratch/05-username.md)
+* [06-people.md](./osint-notes/learn-osint-from-scratch/06-people.md)
+* [07-email.md](./osint-notes/learn-osint-from-scratch/07-email.md)
+* [08-phone-number.md](./osint-notes/learn-osint-from-scratch/08-phone-number.md)
+* [09-image.md](./osint-notes/learn-osint-from-scratch/09-image.md)
+* [10-maps.md](./osint-notes/learn-osint-from-scratch/10-maps.md)
+* [11-website.md](./osint-notes/learn-osint-from-scratch/11-website.md)
+* [12-reporting.md](./osint-notes/learn-osint-from-scratch/12-reporting.md)
+
+### OSINT for Investigators
+* [osint-for-investigators.md](./osint-notes/osint-for-investigators/osint-for-investigators.md)
 
 ---
 
