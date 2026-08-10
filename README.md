@@ -11,10 +11,10 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 * [Web Fundamentals Notes](#-web-fundamentals-notes)
 * [Playwright Notes](#-playwright-notes)
 * [Docker Notes](#-docker-notes)
-* [Gemini Notes](#-gemini-notes)
 * [Data Engineering Notes](#-data-engr-notes)
 * [SQL Notes](#-sql-notes)
 * [OSINT Notes](#-osint-notes)
+* [AI Notes](#-ai-notes)
 
 ---
 
@@ -45,9 +45,6 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 ## 🐳 Docker Notes
 * [docker-hands-on-devops.md](./docker-notes/docker-hands-on-devops.md)
 
-## ♊ Gemini Notes
-* [basics.md](./gemini-notes/basics.md)
-
 ## 📊 Data Engr Notes
 * [fundamentals.md](./data-engr-notes/fundamentals.md)
 
@@ -71,6 +68,11 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 
 ### OSINT for Investigators
 * [osint-for-investigators.md](./osint-notes/osint-for-investigators/osint-for-investigators.md)
+
+## 🤖 AI Notes
+### ♊ Gemini Notes
+* [basics.md](./ai-notes/gemini-notes/basics.md)
+
 
 ---
 
