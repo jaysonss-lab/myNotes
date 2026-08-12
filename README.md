@@ -15,6 +15,7 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 * [SQL Notes](#-sql-notes)
 * [OSINT Notes](#-osint-notes)
 * [AI Notes](#-ai-notes)
+* [n8n Notes](#️-n8n-notes)
 
 ---
 
@@ -72,6 +73,8 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 ## 🤖 AI Notes
 ### ♊ Gemini Notes
 * [basics.md](./ai-notes/gemini-notes/basics.md)
+
+## ♾️ n8n Notes
 
 
 ---
