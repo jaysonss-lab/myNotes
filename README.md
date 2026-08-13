@@ -75,6 +75,7 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 * [basics.md](./ai-notes/gemini-notes/basics.md)
 
 ## ♾️ n8n Notes
+* [zero-to-hero-course.md](./n8n-notes/zero-to-hero-course.md)
 
 
 ---
