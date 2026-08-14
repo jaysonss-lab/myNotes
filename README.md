@@ -74,6 +74,9 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 ### ♊ Gemini Notes
 * [basics.md](./ai-notes/gemini-notes/basics.md)
 
+### 👩‍🚀 Hermes Notes
+* [setup-and-basic-usage.md](./ai-notes/hermes-notes/setup-and-basic-usage.md)
+
 ## ♾️ n8n Notes
 * [zero-to-hero-course.md](./n8n-notes/zero-to-hero-course.md)
 
