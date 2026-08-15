@@ -54,27 +54,16 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 
 ## 🔍 OSINT Notes
 ### Learn OSINT from Scratch
-* [01-search-engines.md](./osint-notes/learn-osint-from-scratch/01-search-engines.md)
-* [02-database-breaches-and-leaks.md](./osint-notes/learn-osint-from-scratch/02-database-breaches-and-leaks.md)
-* [03-sock-puppet.md](./osint-notes/learn-osint-from-scratch/03-sock-puppet.md)
-* [04-socmint.md](./osint-notes/learn-osint-from-scratch/04-socmint.md)
-* [05-username.md](./osint-notes/learn-osint-from-scratch/05-username.md)
-* [06-people.md](./osint-notes/learn-osint-from-scratch/06-people.md)
-* [07-email.md](./osint-notes/learn-osint-from-scratch/07-email.md)
-* [08-phone-number.md](./osint-notes/learn-osint-from-scratch/08-phone-number.md)
-* [09-image.md](./osint-notes/learn-osint-from-scratch/09-image.md)
-* [10-maps.md](./osint-notes/learn-osint-from-scratch/10-maps.md)
-* [11-website.md](./osint-notes/learn-osint-from-scratch/11-website.md)
-* [12-reporting.md](./osint-notes/learn-osint-from-scratch/12-reporting.md)
+* [osint-from-scratch.md](./osint-notes/learn-osint-from-scratch/osint-from-scratch.md)
 
 ### OSINT for Investigators
 * [osint-for-investigators.md](./osint-notes/osint-for-investigators/osint-for-investigators.md)
 
 ## 🤖 AI Notes
-### ♊ Gemini Notes
+### Gemini Notes
 * [basics.md](./ai-notes/gemini-notes/basics.md)
 
-### 👩‍🚀 Hermes Notes
+### Hermes Notes
 * [setup-and-basic-usage.md](./ai-notes/hermes-notes/setup-and-basic-usage.md)
 
 ## ♾️ n8n Notes
