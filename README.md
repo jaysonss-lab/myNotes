@@ -69,7 +69,6 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 ## ♾️ n8n Notes
 * [zero-to-hero-course.md](./n8n-notes/zero-to-hero-course.md)
 
-
 ---
 
 ## ⚠️ Disclaimer & Copyright Notice
