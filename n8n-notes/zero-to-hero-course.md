@@ -6,6 +6,7 @@
 ## Table of Contents
 * [Foundations of n8n: Nodes, Architecture, and Data Types](#foundations-of-n8n-nodes-architecture-and-data-types)
 * [Building Your First AI Agent Workflow (Chatbot/Email Agent Demo)](#building-your-first-ai-agent-workflow-chatbotemail-agent-demo)
+* [Authentication Best Practices for HTTP Request Node](#authentication-best-practices-for-http-request-node)
 
 ---
 <br>
@@ -119,3 +120,29 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 12. To make this workflow available to the public, in the **chat node**, toggle ON **Make Chat Publicly Available**, and this will give you a **url that you can share**.
 
 ![alt text](images/zero-to-hero-course/2026-08-15_22-28.png)
+
+---
+<br>
+
+## Authentication Best Practices for HTTP Request Node
+- The HTTP request node is a very convenient way for us to **replicate an API call without configuring everything**.
+
+![alt text](images/zero-to-hero-course/2026-08-17_15-25.png)
+
+- And it's especially useful when we can just **go to an API documentation and hit the import curl**.
+
+![alt text](images/zero-to-hero-course/2026-08-17_15-27.png)
+
+- After you've imported the curl command, it automatically configures the header section and populate it with the name and the value format of the API keys for authorization.
+- Now you can do it this way **or you can actually set up a credential type** here (see image below).
+
+![alt text](images/zero-to-hero-course/2026-08-17_15-30.png)
+
+- There are **two main reasons** why you would want to do it this way.
+    - **For reusability:** The moment you have set this up, you can just pick from the list of credential you've created in the next upcoming nodes or even in another workflow.
+    - **For security reasons:** Setting up **credential type** allows you to approach the authentication without hard coding the API key into the parameters. All your credentials is going to be stored under credential tab.
+
+    ![alt text](images/zero-to-hero-course/2026-08-17_15-48.png)
+
+---
+<br>
