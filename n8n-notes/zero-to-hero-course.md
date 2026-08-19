@@ -7,6 +7,7 @@
 * [Foundations of n8n: Nodes, Architecture, and Data Types](#foundations-of-n8n-nodes-architecture-and-data-types)
 * [Building Your First AI Agent Workflow (Chatbot/Email Agent Demo)](#building-your-first-ai-agent-workflow-chatbotemail-agent-demo)
 * [Authentication Best Practices for HTTP Request Node](#authentication-best-practices-for-http-request-node)
+* [Google Drive/Sheets/Docs Authentication Setup via Google Cloud Console](#google-drivesheetsdocs-authentication-setup-via-google-cloud-console)
 
 ---
 <br>
@@ -146,3 +147,50 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 
 ---
 <br>
+
+## Google Drive/Sheets/Docs Authentication Setup via Google Cloud Console
+
+- We're going to start with here is the Google Drive node.
+- The way to connect it is going to be similar across all nodes.
+- Once you've connected it once, everything else would just be a simple matter of enabling APIs through your Google Cloud console.
+
+![alt text](images/zero-to-hero-course/2026-08-19_22-27.png)
+
+- Create a new credential.
+
+![alt text](images/zero-to-hero-course/2026-08-19_22-29.png)
+
+- Go to https://console.cloud.google.com/ to get your **client ID** and **client secret**
+- Click **Select a project**, then click **New project**, name it (example) **n8n-test**, then click **Create**. **Select this project**.
+
+![alt text](images/zero-to-hero-course/2026-08-19_22-37.png)
+
+- On the left select **APIs & Services** -> **OAuth consent screen**
+    - On the middle, click **Get started**
+    - Fill up the **App Information, Audience, Contact Information**
+    - Click **Finish** then **Create**
+    - Under **OAuth Overview** -> **Metrics**, click **Create OAuth client**
+        - Applicattion type: **Web application**
+        - Name: **n8n-demo**
+        - Under **Authorized redirect URIs** click **Add URI**
+        - Go back to **n8n** to copy the **OAuth redirect URI**, go back to Google console to paste it. Then click **Create**
+
+        ![alt text](images/zero-to-hero-course/2026-08-19_23-04.png)
+
+        - Now you'll have the **Client ID** to copy  then paste in on n8n.
+    - Go back to Google cloud console, and click the your client ID.
+
+    ![alt text](images/zero-to-hero-course/2026-08-19_23-10.png)
+
+    - Copy the **Client secret** to paste it on your n8n workflow.
+
+    ![alt text](images/zero-to-hero-course/2026-08-19_23-10_1.png)
+
+    - DO NOT click the **Sign in with Google**
+
+    ![alt text](images/zero-to-hero-course/2026-08-19_23-12.png)
+
+    - Go back to Google cloud console, on the left click **Branding**, then click **Add domain**, input **n8n.cloud**, then click **Save**. 
+    - Go to search bar (on top), type **drive**, then click the result **Google Drive API**, then click **Enable**
+    - On the left click **Audience**, then click **Publish app**
+    - Go back to your n8n workflow and now you can click the **Sign in with Google**
