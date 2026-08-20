@@ -8,6 +8,7 @@
 * [Building Your First AI Agent Workflow (Chatbot/Email Agent Demo)](#building-your-first-ai-agent-workflow-chatbotemail-agent-demo)
 * [Authentication Best Practices for HTTP Request Node](#authentication-best-practices-for-http-request-node)
 * [Google Drive/Sheets/Docs Authentication Setup via Google Cloud Console](#google-drivesheetsdocs-authentication-setup-via-google-cloud-console)
+* [Multi-Agent Research Workflow with Perplexity & OpenAI](#multi-agent-research-workflow-with-perplexity--openai)
 
 ---
 <br>
@@ -150,6 +151,8 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 
 ## Google Drive/Sheets/Docs Authentication Setup via Google Cloud Console
 
+### Google Drive Node
+
 - We're going to start with here is the Google Drive node.
 - The way to connect it is going to be similar across all nodes.
 - Once you've connected it once, everything else would just be a simple matter of enabling APIs through your Google Cloud console.
@@ -194,3 +197,159 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
     - Go to search bar (on top), type **drive**, then click the result **Google Drive API**, then click **Enable**
     - On the left click **Audience**, then click **Publish app**
     - Go back to your n8n workflow and now you can click the **Sign in with Google**
+        - You will be redirected to **Sign in with Google** page, select your account.
+        - Click **Advanced** the click **Go to n8n.cloud (unsafe)**
+        - Select what n8n.cloud can access: **Select all**
+        - Click **Continue**. Go back to your n8n workflow to see that your **Account is connected**
+
+- Once you've connected your account, you'll be able to see the list of folders that you have on your drive.
+
+![alt text](images/zero-to-hero-course/2026-08-19_23-49.png)
+
+- So anytime a file is uploaded it's going to trigger this.
+
+### Google Sheets, Google Docs, and other Google tools Nodes
+- For the other nodes such as Google Sheet, Google Docs, what you need to do is just to **go back to your Google Cloud Console** and essentially **enable your APIs** by typing in the Google notes or the Google tool that you want to use on the **Search bar**
+
+![alt text](images/zero-to-hero-course/2026-08-19_23-56.png)
+
+- Then click the **Enable** button.
+- Then you can go back and connect that on your n8n and you're good to go.
+
+---
+<br>
+
+## Multi-Agent Research Workflow with Perplexity & OpenAI
+- We're going to build a simple workflow of an **AI research agent**:
+    - It goes out to the internet and search for the latest AI news
+    - Then send it across to you via email.
+    - Logs those particular headlines so that the next day the workflow is going to check against the logs so that it doesn't repeat the same headlines.
+- This is what the entire workflow will look like:
+
+![alt text](images/zero-to-hero-course/2026-08-20_00-12.png)
+
+### 1. Schedule Trigger Node
+
+![alt text](images/zero-to-hero-course/2026-08-20_00-25.png)
+
+- Trigger Rules:
+    - Trigger Interval: **Days**
+    - Days Between Triggers: **1**
+    - Trigger at Hour: **9 am**
+- Click **Execute step** to populate the data.
+- Click **Pin data**
+
+<br>
+
+### 2. Perplexity Node
+- Click **Perplexity** then choose **Message a model**
+
+![alt text](images/zero-to-hero-course/2026-08-20_00-32.png)
+
+- Go to https://www.perplexity.ai/
+    - On the left click **Account -> All settings**
+    - On the left click **API billing** to top-up your account ($5 minimum) so that you'll have access to **API keyes**
+    - On the left click **API keys**
+        - Click **Create key** then copy it
+    - Return to your n8n workflow
+- In **Perplexity Node**, under **Parameters**
+    - Create new credential:
+        - Paste the API key here, then **Save**
+    - Operation: **Message a Model**
+    - Model: **Sonar Pro**
+    - Messages
+        - Text: **"You are an expert AI research analyst specialized in......"**
+        - Role: **System**
+        - Text: **"Find and summarize the most recent AI news within the last 24 hrs....."**
+
+        ![alt text](images/zero-to-hero-course/2026-08-20_13-58.png)
+
+        - Role: **User**
+    - Click **Add Option** (bottom part)
+        - Select **Search Recency Filter** -> **Day**
+    - Click **Execute step** when you're done.
+- Click **Pin data** to save your API token.
+
+![alt text](images/zero-to-hero-course/2026-08-20_14-07.png)
+
+<br>
+
+### 3. Checking Agent (using OpenAI Node)
+
+- Click **OpenAI** then choose **Message a model**
+
+![alt text](images/zero-to-hero-course/2026-08-20_14-14.png)
+
+- In **OpenAI Node**, you can rename it to **News Checking Agent**
+
+![alt text](images/zero-to-hero-course/2026-08-20_14-24.png)
+
+- Under the **Parameters** tab
+    - Credential to connect with:
+        - **Create new credential** or select the created credential from the prebious topic.
+    - Resource: **Text**
+    - Operation: **Message a model**
+    - Model: **GPT-4**
+    - Messages:
+        - Prompt: Drag the summary from Perplexity in your prompt.
+
+        ![alt text](images/zero-to-hero-course/2026-08-20_14-29.png)
+
+        - Role: **User**
+        - Prompt: "You are an AI news formatter. Your role is to process, check and clean AI news results fetched from Perplexity, to ensure readability and that past headlines are not repeated."
+        - Role: **System**
+    - Click the `+` Tools (bottom part):
+        - Select **Google Sheet** tool
+
+- In **Google Sheet Node**, rename it to **Past AI News Log**
+- Under **Parameters** tab:
+    - Credential to connect with: **Google Sheets account** (account created from previous topic)
+    - Tool Description: **Set Automatically**
+    - Resource: **Sheet Within Document**
+    - Operation: **Get Row(s)**
+    - Document: Select the google sheet file that you created like the example below.
+    
+    ![alt text](images/zero-to-hero-course/2026-08-20_14-48.png)
+
+    - Sheet: Select the sheet name from your file.
+- Go back to the workflow, click the **Play** for the **News Checking Agent**
+
+![alt text](images/zero-to-hero-course/2026-08-20_14-54.png)
+
+<br>
+
+### 4. Gmail Node
+
+- Click **Gmail** then choose **Send a message**
+
+![alt text](images/zero-to-hero-course/2026-08-20_14-57.png)
+
+- Follow the parameters from the example below: (Note: Make sure to turn off the **Append the Attribution** like we did in a previous topic)
+
+![alt text](images/zero-to-hero-course/2026-08-20_15-16.png)
+
+- Click **Execute step**
+
+<br>
+
+### 5. Sheet Log (using Google Sheet Node)
+
+- Click **Google Sheets** then choose **Append row in sheet**
+
+![alt text](images/zero-to-hero-course/2026-08-20_15-28.png)
+
+- In **Google Sheets Node**, under the **Parameters** tab:
+    - Credential to connect with: **Google Sheets account**
+    - Resource: **Sheet Within Document**
+    - Operation: **Append Row**
+    - Document: **Past AI News Log**
+    - Sheet: **Sheet1**
+    - Values to Send:
+        - Date: Drag the **today** variable from the **Schedule Trigger**
+        - Hedalines: Drag the **content** variable from the **News Checking Agent**
+
+    ![alt text](images/zero-to-hero-course/2026-08-20_15-37.png)
+    - Click **Execute step**
+
+---
+<br>
