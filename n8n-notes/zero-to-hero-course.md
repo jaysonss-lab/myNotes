@@ -9,6 +9,7 @@
 * [Authentication Best Practices for HTTP Request Node](#authentication-best-practices-for-http-request-node)
 * [Google Drive/Sheets/Docs Authentication Setup via Google Cloud Console](#google-drivesheetsdocs-authentication-setup-via-google-cloud-console)
 * [Multi-Agent Research Workflow with Perplexity & OpenAI](#multi-agent-research-workflow-with-perplexity--openai)
+* [Fun Slack Use Case - Let AI Do Your Job](#fun-slack-use-case---let-ai-do-your-job)
 
 ---
 <br>
@@ -353,3 +354,76 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 
 ---
 <br>
+
+## Fun Slack Use Case - Let AI Do Your Job
+
+- We're going to try if we can have the AI agent fully take over our profile and respond on our behalf, a.k.a. do our job for us.
+
+![alt text](images/zero-to-hero-course/2026-08-20_20-40.png)
+
+### 1. Slack Trigger Node
+- Go to https://api.slack.com/apps/
+- Click your **App Name**, or create a new one (example) **n8n-bot**
+- On the left click **OAuth & Permissions**
+- Go down to the **Scope** section.
+    - Go to **User Token Scopes**, and these are the list of required scopes that are typically recommended in order for it to function well.
+
+    ![alt text](images/zero-to-hero-course/2026-08-20_21-02.png)
+
+    - Once you added all the required scopes, click the `reinstall your app` that will pop-up on top.
+
+    ![alt text](images/zero-to-hero-course/2026-08-20_21-04.png)
+
+    - Go to **Bot Token Scopes**, make sure that you added `chat:write.customize` and it is checked (turned ON).
+- Once you're done go to **OAuth Tokens** section, and copy your `User OAuth Token`
+- Go back to your n8n workflow, and in the **Slack Trigger Node**, **Create new credential**, click **Access Token** button, and paste here your `User OAuth Token`
+- Go back to your browser https://api.slack.com/apps/, on the left, click **Event Subscriptions**
+    - Click **Subscribe to events on behalf of users**
+    - Add these 4 event subscriptions:
+
+    ![alt text](images/zero-to-hero-course/2026-08-20_21-16.png)
+- Go back to your n8n workflow, and click the **Slack Trigger Node**, copy the **Parameters** below:
+
+    ![alt text](images/zero-to-hero-course/2026-08-20_21-25.png)
+
+    - To setup the **Webhook URLs**:
+        - For now, click the **Test URL** (**Important Note:** When you're done with your workflow, select **Production URL** and paste here the **public URL** of your project, refer to **steps 11 & 12** in [Building Your First AI Agent Workflow](#building-your-first-ai-agent-workflow-chatbotemail-agent-demo))
+            - Copy the URL from the **Test URL**
+            - Go back to your browser https://api.slack.com/apps/
+            - On the left click **Event Subscriptions**
+            - Toggle ON the **Enable Events**
+            - Paste the **Test URL** to **Request URL**
+            - Go back to to your **Slack Trigger Node** and click **Execute step**
+            - Go back to your browser https://api.slack.com/apps/ then click **Retry** to make the **Request URL** verified.
+            - Click the **Subscribe to bot events**
+                - Click **Add Bot User Event**
+                - Add `app_mention`
+                - Click **Save Changes**
+
+    - At the bottom ignore your **own username**. To get your username ID, follow these steps:
+        - Go to you Slack profile
+
+        ![alt text](images/zero-to-hero-course/2026-08-20_21-32.png)
+
+        - On the right click the `three dots` -> then click `Copy member ID`
+
+<br>
+
+### 2. AI Agent Node
+
+- Click the **AI Agent Node**
+- Copy the **Parameters** below:
+    
+    ![alt text](images/zero-to-hero-course/2026-08-20_21-38.png)
+
+    - Add the **Chat Model** and **Memory** tools
+
+### 3. Slack Trigger Node
+- Click **Slack Trigger** then choose **Send a message**
+- Copy the **Parameters** below:
+
+    ![alt text](images/zero-to-hero-course/2026-08-20_22-24.png)
+
+    - Note: Replace **Send as User** with your slack username.
+
+- Click **Execute workflow**
