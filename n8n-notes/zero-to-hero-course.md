@@ -12,6 +12,7 @@
 * [Slack API Setup and Integration](#slack-api-setup-and-integration)
 * [Fun Slack Use Case - Let AI Do Your Job](#fun-slack-use-case---let-ai-do-your-job)
 * [HTTP Request Node and API Call Scenarios (Cat Facts, Weather, Web Scraper)](#http-request-node-and-api-call-scenarios-cat-facts-weather-web-scraper)
+* [Text-to-Image Workflow with AI Prompt Generation](#text-to-image-workflow-with-ai-prompt-generation)
 
 ---
 <br>
@@ -680,7 +681,7 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 ![alt text](images/zero-to-hero-course/2026-08-21_15-00.png)
 
 #### 7. Wait Node for If-False
-- Click the `+` for **If - False** then click **Gmail** to create the node
+- Click the `+` for **If - False** then click **Wait** to create the node
 - Rename this node to **Wait Another 30 seconds**
 - Under the **Parameters** tab:
     - Wait Amount: **30**
@@ -688,3 +689,102 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 - Drag its `+` to loop again on the **Firecrawl Get Request Node**
 
 ![alt text](images/zero-to-hero-course/2026-08-21_15-05.png)
+
+---
+<br>
+
+## Text-to-Image Workflow with AI Prompt Generation
+
+![alt text](images/zero-to-hero-course/2026-08-22_20-30.png)
+
+### 1. Chat Trigger Node
+- Click **Chat Trigger** to create the node.
+
+![alt text](images/zero-to-hero-course/2026-08-22_20-38.png)
+
+- Populate the chat window (example) "Create an image of a cat flying through oops of rainbows." Press Enter.
+
+### 2. OpenAI Node
+- Click **AI** then choose **OpenAI**
+
+![alt text](images/zero-to-hero-course/2026-08-22_21-46.png)
+
+- Rename this to **Image Prompt Generation AI**
+- Follow parameters below, click **Execute step** when done.
+
+![alt text](images/zero-to-hero-course/2026-08-22_21-54.png)
+
+### 3. HTTP (POST) Request Node 
+- Go to https://wavespeed.ai/ and signup to copy the needed cURL POST command.
+- Go back to your n8n workflow.
+- Click HTTP Request to create the node.
+
+![alt text](images/zero-to-hero-course/2026-08-22_22-03.png)
+
+- Rename this to **Wavespeed Post**
+- Under the **Parameters** tab:
+    - Click the **Import cURL** button.
+        - Paste the cURL command here then click **Import**
+    - Authentication: **Generic Credential Type**
+    - Generic Auth Type: **Header Auth**
+    - Header Auth: **Wavespeed AI Credential** (Note: Use **Create new credential** to set this up)
+    - Send Query Parameters: Toggle OFF
+    - Send Headers: Toggle OFF
+    - Send Body: Toggle ON
+
+    ![alt text](images/zero-to-hero-course/2026-08-22_22-15.png)
+
+    - Click **Execute step** button
+
+### 4. Wait Node
+- Click the `+` then click **Wait** to create the node.
+- Rename this node to **Wait 15 Secs**
+- Under the **Parameters** tab:
+    - Wait Amount: **15**
+    - Wait Unit: **Seconds**
+    - Click the **Execute step** button
+- Go back to the **HTTP Request Node** and click the **Pin data**, to not exhaust your API key.
+
+### 5. HTTP (GET) Request Node
+- Go back to https://wavespeed.ai/ to copy the needed cURL GET command.
+- Go back to your n8n workflow.
+- Click the `+` then click **HTTP Request** to create the node.
+- Rename this to **Wavespeed Get**
+- Under the **Parameters** tab:
+    - Click the **Import cURL** button.
+        - Paste the cURL command here then click **Import**
+    - Method: **GET**
+    - URL: Click **Expression** to adjust it:
+
+    ![alt text](images/zero-to-hero-course/2026-08-22_22-38.png)
+
+    - Authentication: **Generic Credential Type**
+    - Generic Auth Type: **Header Auth**
+    - Header Auth: **Wavespeed AI Credential** (Note: Use **Create new credential** to set this up)
+    - Send Query Parameters: Toggle OFF
+    - Send Headers: Toggle OFF
+    - Send Body: Toggle OFF
+    - Click the **Execute step** button
+
+### 6. If Node
+- Click the `+` then click **If** to create the node.
+- Follow parameters below, click **Execute step** when done.
+
+![alt text](images/zero-to-hero-course/2026-08-22_22-45.png)
+
+### 7. Gmail Node for If-True
+- Click the `+` for **If - True** then click **Gmail** to create the node
+- Follow parameters below:
+
+![alt text](images/zero-to-hero-course/2026-08-22_22-49.png)
+
+### 8. Wait Node for If-False
+- Click the `+` for **If - False** then click **Gmail** to create the node
+- Rename this node to **Wait Another 15 Secs**
+- Under the **Parameters** tab:
+    - Wait Amount: **15**
+    - Wait Unit: **Seconds**
+- Drag its `+` to loop again on the **Wavespeed Get Request Node**
+
+---
+<br>
