@@ -11,6 +11,7 @@
 * [Multi-Agent Research Workflow with Perplexity & OpenAI](#multi-agent-research-workflow-with-perplexity--openai)
 * [Slack API Setup and Integration](#slack-api-setup-and-integration)
 * [Fun Slack Use Case - Let AI Do Your Job](#fun-slack-use-case---let-ai-do-your-job)
+* [HTTP Request Node and API Call Scenarios (Cat Facts, Weather, Web Scraper)](#http-request-node-and-api-call-scenarios-cat-facts-weather-web-scraper)
 
 ---
 <br>
@@ -505,3 +506,185 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
     - Note: Replace **Send as User** with your slack username.
 
 - Click **Execute workflow**
+
+---
+<br>
+
+## HTTP Request Node and API Call Scenarios (Cat Facts, Weather, Web Scraper)
+
+### First Scenario: 
+- We'll do a simple API call to a public API endpoint that doesn't need any authentication in order to get some fun little facts about cats.
+
+#### 1. Trigger Manually Node
+
+- Click **Trigger Manually**
+
+![alt text](images/zero-to-hero-course/2026-08-21_12-49.png)
+
+- Click the **Execute workflow** button, then click the node, notice that it has a blank OUTPUT.
+
+#### 2. HTTP Request Node
+
+- Click **HTTP Request**
+
+![alt text](images/zero-to-hero-course/2026-08-21_12-54.png)
+
+- Under the **Parameters** tab:
+    - Method: **GET**
+    - URL: https://catfact.ninja/fact
+    - Click the **Execute step** button
+
+<br>
+
+### Second Scenario:
+- We're going to make an API call to open weathermap.org to get you the latest information about the weather on a specific city that you requested.
+
+#### 1. Trigger Manually Node
+
+- Click **Trigger Manually**, then click the **Execute workflow** button, then click the node, notice that it has a blank OUTPUT.
+
+#### 2. HTTP Request Node
+
+- Go to https://openweathermap.org/curent and signup.
+    - Scroll down to **Built-in API request by city name** section
+    - Copy the API call that you want.
+
+    ![alt text](images/zero-to-hero-course/2026-08-21_13-12.png)
+
+- Go back to your n8n workflow:
+    - Click the `+` then click **HTTP Request** to create the node
+    - Under the **Parameters** tab:
+        - Method: **POST**
+        - URL: `<paste here the API call>` (Note: Replace the `{city name}` that you want)
+        - Authentication: **Generic Credential Type**
+        - Generic Auth Type: **Header Auth**
+        - Header Auth: **Create new credential**
+            - Rename this to **Openweathermap Demo**
+            - Name: **x-api-key**
+            - Value: Paste here the API key generated from openweather.org
+            - Click **Save**
+        - Click the **Execute step** button
+
+<br>
+
+### Third Scenario:
+- We'll make an API call to a web scraper called Firecrawl that could intelligently scrape any web pages that you like.
+
+<br>
+
+#### 1. Trigger Manually Node
+
+- Click **Trigger Manually**, then click the **Execute workflow** button, then click the node, notice that it has a blank OUTPUT.
+
+#### 2. HTTP Request Node
+
+- Go to https://www.firecrawl.dev/ and signup.
+    - Go to **Dashboard** -> **Docs** -> **API Reference** tab -> **Scrape**. Click **Try it**
+
+    ![alt text](images/zero-to-hero-course/2026-08-21_13-55.png)
+
+    - Put the URL of the site that you want to scrape, then copy the curl command.
+
+    ![alt text](images/zero-to-hero-course/2026-08-21_13-57.png)
+
+- Go back to your n8n workflow:
+    - Click the `+` then click **HTTP Request** to create the node
+    - Under the **Parameters** tab:
+        - Click the **Import cURL** button:
+            - Paste here the curl command from Firecrawl
+            - Click **Import** button
+        - Authentication: **Generic Credential Type**
+        - Generic Auth Type: **Header Auth**
+        - Header Auth: **Create new credential**
+            - Rename this to **Firecrawl Demo**
+            - Name: **Authorization**
+            - Value: Click **Expression** then put here `Bearer <paste here the API key from the Firecrawl Dashboard>`
+            - Click **Save**
+        - Toggle OFF the **Send Headers** since we already setup the header auth.
+        - Click the **Execute step** button
+
+#### What happens when you have a `post request` that requires a `get` for you to obtain the result of your `post request`
+
+#### 1. Trigger Manually Node
+
+- Click **Trigger Manually**, then click the **Execute workflow** button, then click the node, notice that it has a blank OUTPUT.
+
+#### 2. HTTP Request Node
+
+- Go to https://www.firecrawl.dev/ 
+    - Go to **Dashboard** -> **Docs** -> **Documentation** tab -> On the left click **Extract**.
+    - Copy this example cURL command
+
+    ![alt text](images/zero-to-hero-course/2026-08-21_14-39.png)
+
+- Go back to your n8n workflow:
+    - Click the `+` then click **HTTP Request** to create the node
+    - Rename it to **Firecrawl Extract Post Request**
+    - Under the **Parameters** tab:
+        - Click the **Import cURL** button:
+            - Paste here the curl command from Firecrawl
+            - Click **Import** button
+        - Authentication: **Generic Credential Type**
+        - Generic Auth Type: **Header Auth**
+        - Header Auth: **Firecrawl Demo** (the one that you created earlier)
+        - Toggle OFF the **Send Headers** since we already setup the header auth.
+        - Click the **Execute step** button
+        - So when we do that, as you can see that the note says it is executed successfully. What it means is it's pushed through the post request to the API endpoint successfully and it's **currently processing the post request**.
+
+#### 3. Wait Node
+- Now because it's extracting for a couple different pages and specific information, it's going to take some time. So what we want to do now is wait.
+- Click **Wait** to create the node
+
+![alt text](images/zero-to-hero-course/2026-08-21_14-29.png)
+
+- Rename this node to **Wait 30 seconds**
+- Under the **Parameters** tab:
+    - Wait Amount: **30**
+    - Wait Unit: **Seconds**
+    - Click the **Execute step** button
+- Go back to the **HTTP Request Node** and click the **Pin data**, to not exhaust your API key.
+
+#### 4. New HTTP Request Node
+- Go to https://www.firecrawl.dev/ 
+    - Go to **Dashboard** -> **Docs** -> **Documentation** tab -> On the left click **Extract**.
+    - Copy this example cURL command
+
+    ![alt text](images/zero-to-hero-course/2026-08-21_14-45.png)
+
+- Go back to your n8n workflow:
+    - Click the `+` then click **HTTP Request** to create the node
+    - Rename this to **Firecrawl Get Request**
+    - Under the **Parameters** tab:
+        - Click the **Import cURL** button:
+            - Paste here the curl command from Firecrawl
+            - Click **Import** button
+        - Follow the URL Below:
+
+        ![alt text](images/zero-to-hero-course/2026-08-21_14-48.png)
+
+        - Click the **Execute step** button
+
+#### 5. If Node
+- So, let's say after the post request, we wait 30 seconds and then the get request launches and the status is not yet completed. What will happen then? Well, the workflow will break down. There will be an error and the workflow will stop working. So to avoid that scenario, what we want to do is to create what we call a loop and in this case we're going to add an if node so that we can continue that logic.
+- Click the `+` then click **If** to create the node
+- Follow Parameters below, then click **Execute step**
+
+![alt text](images/zero-to-hero-course/2026-08-21_14-55.png)
+
+![alt text](images/zero-to-hero-course/2026-08-21_14-56.png)
+
+#### 6. Gmail Node for If-True
+- Click the `+` for **If - True** then click **Gmail** to create the node
+- Follow parameters below:
+
+![alt text](images/zero-to-hero-course/2026-08-21_15-00.png)
+
+#### 7. Wait Node for If-False
+- Click the `+` for **If - False** then click **Gmail** to create the node
+- Rename this node to **Wait Another 30 seconds**
+- Under the **Parameters** tab:
+    - Wait Amount: **30**
+    - Wait Unit: **Seconds**
+- Drag its `+` to loop again on the **Firecrawl Get Request Node**
+
+![alt text](images/zero-to-hero-course/2026-08-21_15-05.png)
