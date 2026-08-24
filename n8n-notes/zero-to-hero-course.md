@@ -13,6 +13,7 @@
 * [Fun Slack Use Case - Let AI Do Your Job](#fun-slack-use-case---let-ai-do-your-job)
 * [HTTP Request Node and API Call Scenarios (Cat Facts, Weather, Web Scraper)](#http-request-node-and-api-call-scenarios-cat-facts-weather-web-scraper)
 * [Text-to-Image Workflow with AI Prompt Generation](#text-to-image-workflow-with-ai-prompt-generation)
+* [Text-to-Video Workflow with AI Prompt Generation](#text-to-video-workflow-with-ai-prompt-generation)
 
 ---
 <br>
@@ -785,6 +786,44 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
     - Wait Amount: **15**
     - Wait Unit: **Seconds**
 - Drag its `+` to loop again on the **Wavespeed Get Request Node**
+
+---
+<br>
+
+## Text-to-Video Workflow with AI Prompt Generation
+- This is almost the same with the **Text-to-Image** that we created previously.
+
+![alt text](images/zero-to-hero-course/2026-08-23_22-20.png)
+
+### 1. Chat Trigger Node
+- Click **Chat Trigger** to create the node.
+- Populate the chat window (example) "Create a video of five gorillas on a boat having a great fishing trip." Press Enter.
+
+### 2. OpenAI Node
+- Click **AI** then choose **OpenAI**
+- Rename this to **Video Prompt Agent**
+- Parameters same as the **Text-to-Image** that we created previously, just change the prompt to (example) "You are an expert Text-to-Video Generation Prompt Engineer, working inside an n8n automation. Your task is....."
+
+### 3. HTTP (POST) Request Node 
+- Go to https://wavespeed.ai/ and signup to copy the needed cURL POST command.
+- Go back to your n8n workflow.
+- Click HTTP Request to create the node.
+- Rename this to **Wavespeed Post**
+- Under the **Parameters** tab:
+    - Click the **Import cURL** button.
+        - Paste the cURL command here then click **Import**
+    - Authentication: **Generic Credential Type**
+    - Generic Auth Type: **Header Auth**
+    - Header Auth: **Wavespeed AI Credential** (Note: Use **Create new credential** to set this up)
+    - Send Query Parameters: Toggle OFF
+    - Send Headers: Toggle OFF
+    - Send Body: Toggle ON
+
+    ![alt text](images/zero-to-hero-course/2026-08-23_22-35.png)
+
+    - Click **Execute step** button
+
+### Follow Steps 4 to 8 of 'Text-to-Image'
 
 ---
 <br>
