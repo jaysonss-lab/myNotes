@@ -14,6 +14,7 @@
 * [HTTP Request Node and API Call Scenarios (Cat Facts, Weather, Web Scraper)](#http-request-node-and-api-call-scenarios-cat-facts-weather-web-scraper)
 * [Text-to-Image Workflow with AI Prompt Generation](#text-to-image-workflow-with-ai-prompt-generation)
 * [Text-to-Video Workflow with AI Prompt Generation](#text-to-video-workflow-with-ai-prompt-generation)
+* [Image-to-Video Workflow with Google Drive and Telegram Integration](#image-to-video-workflow-with-google-drive-and-telegram-integration)
 
 ---
 <br>
@@ -827,3 +828,6 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 
 ---
 <br>
+
+## Image-to-Video Workflow with Google Drive and Telegram Integration
+
