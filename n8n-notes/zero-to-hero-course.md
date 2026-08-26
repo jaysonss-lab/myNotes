@@ -824,10 +824,134 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 
     - Click **Execute step** button
 
-### Follow Steps 4 to 8 of 'Text-to-Image'
+### To finish the workflow, the next steps are the same from 'Steps 4 to 8 of [Text-to-Image](#text-to-image-workflow-with-ai-prompt-generation)'
+
 
 ---
 <br>
 
 ## Image-to-Video Workflow with Google Drive and Telegram Integration
 
+![alt text](images/zero-to-hero-course/2026-08-26_12-17.png)
+
+### 1. Google Drive Node
+- Click **On changes involving a specific folder** to create that node.
+
+![alt text](images/zero-to-hero-course/2026-08-26_12-29.png)
+
+- Under the **Parameters** tab:
+    - Credential to connect with: **Google Drive account**
+    - Poll Times:
+        Mode: **Every Minute**
+- Trigger On: **Changes Involving a Specific Folder
+- Folder:
+    - From list: **Your Google Drive Folder**
+- Watch For: **File Created**
+- Click **Fetch Test Event** to test
+- Note: Your google drive folder should be publicly available
+
+### 2. Telegram Nodes
+- Go to your Telegram app.
+    - Search for 'BotFather'
+    - Click **Start** or type `/start` then `/newbot`
+        - Name of your bot: **n8n_test_demo1**
+        - Bot username: **n8n_test_demo1_bot**
+        - Copy the API key
+- Go back to your n8n workflow:
+    - Click **Telegram** then choose **Send a photo message**
+
+        ![alt text](images/zero-to-hero-course/2026-08-26_12-37.png)
+
+        - Under the **Parameters** tab:
+            - Credential to connect with: **Create new credential**
+                - Rename this new credential
+                - Paste here the API key, click **Save**
+            - Resource: **Message**
+            - Operation: **Send Photo**
+            - Chat ID: put **test** for now
+- Go back to your n8n workflow:
+        - Add another a separate node by clicking `n` in your keybaord
+            - **Telegram** node -> **On message**
+                - Under the **Parameters** tab:
+                    - Credential to connect with: **Your telegram credential that you created earlier**
+                    - Trigger On: **Message**
+                    - Click **Execute step**
+- Go back to your Telegram app.
+    - Click the link.
+
+    ![alt text](images/zero-to-hero-course/2026-08-26_13-01.png)
+
+    - Click the **Start** button the type `test` then Enter.
+
+- Go back to your n8n workflow:
+    - Click the 2nd Telegram node:
+        - From the OUTPUT, copy the **chat ID**
+    - Click the 1st Telegram node:
+        - Chat ID: Paste it here to replace the word **test** that you temporarily put earlier
+
+- In your n8n workflow click **Executions**
+
+    ![alt text](images/zero-to-hero-course/2026-08-26_13-16.png)
+
+    - Click your very first execution to see your previous data. Click the **Copy to Editor** button.
+
+- Click again the 1st **Telegram** node:
+
+    ![alt text](images/zero-to-hero-course/2026-08-26_13-24.png)
+
+### 3. Google Sheets Node
+- Click **Google Sheets** node then choose **Append row in sheet**
+- Follow the parameters from the example below:
+
+![alt text](images/zero-to-hero-course/2026-08-26_13-31.png)
+
+![alt text](images/zero-to-hero-course/2026-08-26_13-33.png)
+
+### 4. OpenAI Node
+- Click  **OpenAI** node then choose **Message a model**
+    - Rename this to **Video Prompt Agent**
+
+![alt text](images/zero-to-hero-course/2026-08-26_13-34.png)
+
+- Click the 2nd **Telegram** node, and click the **Execute step**
+- Go back to your Telegram app and type this example prompt: Create a video of a cat jumping through hoops of rainbows. Then press Enter.
+
+- Go back to your n8n workflow, then click the **OpenAI** node.
+    
+    ![alt text](images/zero-to-hero-course/2026-08-26_13-51.png)
+
+    - Click the **Add Message** then choose **Prompt**
+    
+    ![alt text](images/zero-to-hero-course/2026-08-26_13-54.png)
+
+    - Click the `+` **Add Tools** at the bottom:
+        - Select **Google Sheets Tool**
+            - Rename it to **Google Sheets Log**
+            - Under its **Parameters** tab:
+                - Credential to connect with: **Google Sheets account**
+                - Tool Description: **Set Automatically**
+                - Resource: **Sheet Within Document**
+                - Operation: **Get Row(s)**
+                - Document: From list: **Image to Video Log**
+                - Sheet: **Sheet1**
+    - Click the **Execute step**
+
+### 5. HTTP Request Node
+- Go to https://wavespeed.ai/ to copy the needed cURL POST command.
+- Go back to your n8n workflow:
+- Click **HTTP Request** to create the node.
+
+    ![alt text](images/zero-to-hero-course/2026-08-26_14-15.png)
+
+    - Rename it to **Seedance Post**, Import cURL that you copied from https://wavespeed.ai/, then copy the example Parameters below:
+
+    ![alt text](images/zero-to-hero-course/2026-08-26_14-23.png)
+
+    ![alt text](images/zero-to-hero-course/2026-08-26_14-21.png)
+
+    - Click **Execute step**
+
+### To finish the workflow, the next steps are the same from 'Steps 4 to 8 of [Text-to-Image](#text-to-image-workflow-with-ai-prompt-generation)'
+
+---
+<br>
