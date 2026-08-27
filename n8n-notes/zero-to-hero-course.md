@@ -15,6 +15,7 @@
 * [Text-to-Image Workflow with AI Prompt Generation](#text-to-image-workflow-with-ai-prompt-generation)
 * [Text-to-Video Workflow with AI Prompt Generation](#text-to-video-workflow-with-ai-prompt-generation)
 * [Image-to-Video Workflow with Google Drive and Telegram Integration](#image-to-video-workflow-with-google-drive-and-telegram-integration)
+* [Multi-Workflow Orchestration with Subworkflows](#multi-workflow-orchestration-with-subworkflows)
 
 ---
 <br>
@@ -955,3 +956,51 @@ Once the **Simple Memory** is added, the **AI Agent node** becomes **yellow**. T
 
 ---
 <br>
+
+## Multi-Workflow Orchestration with Subworkflows
+- In the previous topic **Image-to-Video Workflow**, the current workflow has **two triggers in one single worksheet**. And that might **not be ideal for error handling** because when the workflow errors out, you have to go into both the workflows to check which node that the error has occurred in. **One way to do is to split the workflow into two.**
+
+- Make the one with the very 1st trigger (Google Drive) the **Main Workflow**. And the other as a **Subworkflow**.
+
+![alt text](images/zero-to-hero-course/2026-08-26_15-50.png)
+
+### 1. Execute Sub-workflow Node
+
+- Click the `+` to add an **Execute Sub-workflow** node.
+
+![alt text](images/zero-to-hero-course/2026-08-26_15-52.png)
+
+- Copy the Parameters below:
+
+![alt text](images/zero-to-hero-course/2026-08-26_17-57.png)
+
+### 2. When executed by Another Workflow
+
+- Go to the **Subworkflow**.
+    - Remove the 1st node, which is the **Telegram** node.
+    - Press `n` to create a new node.
+    - Select **Execute Sub-workflow** -> **When executed by Another Workflow**
+        - Under the **Parameters** tab:
+            - Input data mode: Select **Accept all data**. (Note: Select **Define using fields below** if you want to select only the ones you need and adjust their output type)
+    - Click the `+` of the **When executed by Another Workflow** node. Select **Telegram** -> **Send message and wait for response**
+
+### 3. Telegram Node
+
+- Copy the Parameters below, click the **Execute step** when done.
+
+![alt text](images/zero-to-hero-course/2026-08-26_18-48.png)
+
+- Go to your Telegram app to respond. Example: Create a video of a cat flying through hoops of rainbows.
+
+- Go back to your n8n Subworkflow, chain up the **Telegram** node to the **OpenAI** node by dragging its `+`
+
+![alt text](images/zero-to-hero-course/2026-08-26_18-59.png)
+
+### 4. OpenAI Node
+- Click the **AIOpen** (Video Prompt Agent) node, to update its **Prompt**.
+
+![alt text](images/zero-to-hero-course/2026-08-26_19-02.png)
+
+### Final Workflows (Main & Sub)
+
+![alt text](images/zero-to-hero-course/2026-08-26_19-07.png)
