@@ -1,5 +1,22 @@
 # Python Code Safety and Testing
 
+<br>
+
+---
+
+<br>
+
+## Table of Contents
+* [Python Exception Handling](#python-exception-handling)
+* [Python Logging](#python-logging)
+* [Pytest](#pytest)
+
+<br>
+
+---
+
+<br>
+
 ## Python Exception Handling
 - [Youtube Link: Python Exception Handling Tutorial for Beginners](https://www.youtube.com/watch?v=PHzm_Iox1mE&list=PL0Zuz27SZ-6MQri81d012LwP5jvFZ_scc&index=19)
 - Exception handling allows your program to deal with unexpected events (errors) without crashing.
@@ -50,7 +67,9 @@ finally:
 The first part of that line is the name of the exception you need to use in your `except` block.
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## Python Logging
@@ -185,7 +204,9 @@ When creating custom loggers, you are essentially assembling these three parts:
 3. **Formatter:** The visual style of your log entries.
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## Pytest
@@ -544,3 +565,7 @@ def test_get_todo_item():
 - `requests.get(url)` - Sends a real network request over the internet to the server.
 - `response.status_code` - Every API response comes with a 3-digit status code. `200` means successful, `404` means not found, and `500` means server error. Testing this first prevents your test from crashing on broken data.
 - `response.json()` - Most modern APIs talk in JSON format. This method instantly turns that JSON string into a normal Python dictionary so you can look up values using keys (like `data["id"]`).
+
+<br>
+
+---

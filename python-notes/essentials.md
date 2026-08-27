@@ -1,6 +1,30 @@
 # Python Course
 - [Youtube Link: Python Full Course for Beginners - From Zero to Hero](https://www.youtube.com/watch?v=Rq5gJVxz55Q)
 
+<br>
+
+---
+
+<br>
+
+## Table of Contents
+* [Chapter 1 - Python Fundamentals](#chapter-1---python-fundamentals)
+* [Chapter 2 - Python Strings](#chapter-2---python-strings)
+* [Chapter 3 - Python Numbers](#chapter-3---python-numbers)
+* [Chapter 4 - Python Logic & Operators](#chapter-4---python-logic--operators)
+* [Chapter 5 - Python Conditional Statements](#chapter-5---python-conditional-statements)
+* [Chapter 6 - Python Loops](#chapter-6---python-loops)
+* [Chapter 7 - Python Data Structures](#chapter-7---python-data-structures)
+* [Chapter 8 - Python Functions](#chapter-8---python-functions)
+* [Chapter 9 - Python Environments](#chapter-9---python-environments)
+* [Chapter 10 - Python OOP](#chapter-10---python-oop)
+
+<br>
+
+---
+
+<br>
+
 ## Chapter 1 - Python Fundamentals
 
 ### Setup your Environment (VS Code)
@@ -112,6 +136,9 @@ print(number.upper()) # AttributeError. int has no attribute upper
 print(number.bit_length())  # Result is 4
 ```
 <br>
+
+---
+
 <br>
 
 ## Chapter 2 - Python Strings
@@ -301,6 +328,9 @@ print(phone.isnumeric())    # Result is True
 ```
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 3 - Python Numbers
@@ -419,6 +449,9 @@ print(isinstance(x, float)) # Result is False
 ```
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 4 - Python Logic & Operators
@@ -535,6 +568,9 @@ print(x is y)   # Result is True
 ```
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 5 - Python Conditional Statements
@@ -704,6 +740,9 @@ match country:
 ```
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 6 - Python Loops
@@ -880,6 +919,9 @@ print("Thank You")
 
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 7 - Python Data Structures
@@ -1492,6 +1534,9 @@ print(user)     # Result is {"id": None, "name": None, "age": None, "city": None
 ```
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 8 - Python Functions 
@@ -1797,6 +1842,9 @@ process_user_email(email)
     - Always describe what goes in and what comes out of the function in the docstring
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 9 - Python Environments
@@ -1885,6 +1933,9 @@ In terminal run these commands:
 5. You can run `uv sync` to sync everything but it will automatically run whenever you run your Python script - `uv run main.py`
 
 <br>
+
+---
+
 <br>
 
 ## Chapter 10 - Python OOP
@@ -1990,3 +2041,7 @@ for v in (my_car, your_car, cessna, mack, wagon):
 # They all have the same methods but that doesn't mean they provide the same responses.
 ```
 - In our example, it means that even if we're using the same methods on each of the objects, we're going to get different responses.
+
+<br>
+
+---

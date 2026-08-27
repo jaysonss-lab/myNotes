@@ -1,5 +1,28 @@
 # Data and APIs 
 
+<br>
+
+---
+
+<br>
+
+## Table of Contents
+* [Python File Handling](#python-file-handling)
+* [JSON in Python - Read & Write](#json-in-python---read--write)
+* [CSV in Python - Read & Write](#csv-in-python---read--write)
+* [API Requests in Python](#api-requests-in-python)
+* [Types of API](#types-of-api)
+* [Python Environment Variables in QA Automation (with `uv`)](#python-environment-variables-in-qa-automation-with-uv)
+* [Python Database Connections in QA Automation (with `uv`)](#python-database-connections-in-qa-automation-with-uv)
+* [Data Generation in QA Automation (with `uv`)](#data-generation-in-qa-automation-with-uv)
+
+
+<br>
+
+---
+
+<br>
+
 ## Python File Handling
 - [Youtube Link: Python File Handling](https://www.youtube.com/watch?v=BRrem1k3904&list=PL0Zuz27SZ-6MQri81d012LwP5jvFZ_scc&index=23)
 
@@ -103,7 +126,9 @@ with open('names.txt', 'w') as file:
     file.write(content)
 ```
 <br>
-<br>
+
+---
+
 <br>
 
 ## JSON in Python - Read & Write
@@ -200,7 +225,9 @@ print(output)       # Result is like student_dict above
 ![alt text](images/data-and-apis/2026-06-23_20-01.png)
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## CSV in Python - Read & Write
@@ -364,7 +391,9 @@ Output:
 ![alt text](images/data-and-apis/2026-06-24_14-20.png)
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## API Requests in Python
@@ -542,7 +571,9 @@ except ValueError:
 ![alt text](images/data-and-apis/2026-06-24_19-48.png)
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## Types of API
@@ -835,7 +866,9 @@ for event in client.events():
 ```
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## Python Environment Variables in QA Automation (with `uv`)
@@ -925,7 +958,9 @@ uv run test_api.py
 - **CI/CD configuration:** In GitHub Actions or Jenkins, inject these identical variable keys into the runner environment settings instead of using a `.env` file.
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## Python Database Connections in QA Automation (with `uv`)
@@ -1031,7 +1066,9 @@ uv run test_database.py
     - `cursor.fetchall()` when verifying a list of items (like products in a cart).
 
 <br>
-<br>
+
+---
+
 <br>
 
 ## Data Generation in QA Automation (with `uv`)
@@ -1132,3 +1169,7 @@ uv run test_data_generation.py
 - **Seed Your Randomness:** If a test fails, you need to recreate the exact data that broke it. Use `Faker.seed(1234)` or `random.seed(1234)` during debugging to generate the exact same "random" data repeatedly.
 - **Keep Core Formats Valid:** Ensure generated emails contain `@` and domain extensions, and phone numbers strictly match the length rules of your target system's database validators.
 - **Isolate Test Identity Indicators:** Prefix your generated data with identifiers like `test_` or `qa_`. This makes it simple for your database administrators to filter out and purge automation clutter from performance environments.
+
+<br>
+
+---
