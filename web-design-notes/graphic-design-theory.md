@@ -12,6 +12,14 @@
     - [Color Harmonies](#color-harmonies)
     - [Create a Mood Board with Canva](#create-a-mood-board-with-canva)
     - [Selecting Color for a New Design](#selecting-color-for-a-new-design)
+* [Typography Theory](#typography-theory)
+    - [Typography in Design](#typography-in-design)
+    - [Typography Anatomy](#typography-anatomy)
+    - [Type Styles - Serif Fonts](#type-styles---serif-fonts)
+    - [Type Styles - Sans Serif Fonts](#type-styles---sans-serif-fonts)
+    - [Kerning and Spacing](#kerning-and-spacing)
+    - [Type Hierarchy](#type-hierarchy)
+    - [Font Pairing](#font-pairing)
 
 ---
 <br>
@@ -203,6 +211,204 @@
 - Get the color from the client, or
 - You can pull a real image with good color combinations, and generate a color pallete from it using canva or adobe.
 - Consider everthing that you learned -- color meaning, color harmony, contrast, etc.
+
+<br>
+
+---
+
+<br>
+
+## Typography Theory
+
+### Typography in Design
+
+#### Typography
+- is the art or technique of displaying words or text in a **readable, digestible, and appealing** way.
+
+#### Typeface
+- are groups of fonts that **share a similar style or characteristic**.
+
+#### Font
+- refers to one of the many fonts that make up a whole typeface or type family.
+- refers to just **one style or weight of any given font in any given typeface**.
+
+#### Typeface Classifications
+- **Serif** - are fonts that have these little tails at the end of each letter stem. **These tails make smaller type easier to read**. That's why you see like Times New Roman **appear frequently in books and smaller printed text**.
+
+![alt text](images/graphic-design-theory/2026-08-31_14-47.png)
+
+- **Sans-serif** - means **without** those little tails at the end. These make **for great headlines because of the simplicity**.
+
+![alt text](images/graphic-design-theory/2026-08-31_14-53.png)
+
+- **Script** - it has **beautiful curves and stroke weights**. They **demand attention**, and harder to read. They can look custom and authentic, giving the design a very unique look.
+
+![alt text](images/graphic-design-theory/2026-08-31_14-55.png)
+
+- **Decorative** - This feel more like graphics instead of type. These typefaces are **so detailed that they can stand alone** as a statement without the need for photos, so be careful **not to overuse**.
+
+![alt text](images/graphic-design-theory/2026-08-31_14-58.png)
+
+<br>
+
+### Typography Anatomy
+
+![alt text](images/graphic-design-theory/2026-08-31_15-18.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-19.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-19.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-20.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-21.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-22.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-22_1.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-23.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-24.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-24_1.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-25.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-26.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-26.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-27.png)
+
+![alt text](images/graphic-design-theory/2026-08-31_15-29.png)
+
+<br>
+
+### Type Styles - Serif Fonts
+- I suggest you keep a **special list of 20 to 30 handpicked, commonly used fonts** you can use on projects. Like the Times New Roman - is the default serif font that you see on most programs.
+
+#### History of Serif Typefaces
+
+![alt text](images/graphic-design-theory/2026-08-31_17-40.png)
+
+- **Old Style** - this was created a very long time ago, the type that was **easy to read for book printing**. Examples:
+    - Garamond
+    - Berkeley
+    - Minion
+    - Palatino
+
+- **Transitional** - Tend to end with **ball terminals**. Example:
+    - Times New Roman
+
+- **Didone / Modern** - are highly stylized, that's why they're **commonly found in high end fashion brands**. They can also be good **for dramatic poster headlines** with simple solid backgrounds. Examples:
+    - Didot
+    - Bodoni
+
+- **Slab Serif** - designed to **demand one's attention** on posters, like political statements. Examples:
+    - Rockwell
+    - Archer / Archer Pro
+
+<br>
+
+### Type Styles - Sans Serif Fonts
+- tend to have a **modern, clean and sleek appearance**, but they sometimes **lack the elegance or charm** needed in a particular situation.
+- are fantastic **for big, bold headlines**.
+- are **great for websites and digital mediums**.
+- **works well with tight spacing**.
+- not good with small blocks of text.
+- Examples:
+    - Helvetica
+    - Futura
+    - Avant Garde Gothic
+
+<br>
+
+### Kerning and Spacing
+
+#### Font Weights
+- **Bold Weights** 
+    - are **strong**, have high impact and **grab your attention**.
+    - it highlights the most important to the viewer
+
+- **Lighter Weights** 
+    - thin weight, can feel **streamlined and modern**
+    - they could be a way to highlight something by being **soft and subtle**
+    - do not make them smaller as lighter fonts tend to be **hard to read at a certain size level**
+
+- **Regular Weights**
+    - are perfect for **body copy**. 
+
+#### Spacing
+- **Wide** spacing
+    - can elevate the type to make it seem more **elegant and high-end**
+    - **don't use it on longer phrase** or paragraph as it can be overwhelming
+    - **works well** with uppercase letters
+    - almost **never works** with lowercase letters
+
+- **Tight** spacing
+    - can make a design have a **sense of urgency**
+    - it can make a strong type seem **cohesive and connected**
+
+#### Kerning 
+- is a term used for the **manual spacing between characters**
+- is very important as not all characters in a font have perfect spacing by default
+
+#### Alignment
+- **Left** Alignment
+    - Nothing beats the power of **left alignment** and anchoring text and providing a strong balance design, **especially with longer headlines and phrases**.
+
+- **Center** Alignment
+    - can be powerful when **used on shorter words and phrasing**
+
+- **Right** Alignment
+    - use this alignment the least. Use **left alignment** as much as possible. Use **right alignment** just to help balance a design.
+
+- **No** Alignment
+    - sometimes you can have a little fun and break the alignment, **as long as the words flow in order** down the page.
+
+- **Curves, Bends** Alignment
+    - Do not feel like text has to go in straight lines. They can have curves **to show movement**. Text can wrap around object to show movement.
+
+#### Fuse Design Elements
+- The cool and trendy thing to do today is have **text go behind objects** like they're weaving in and out of layers and becoming one unified element.
+- But be careful to make sure they are **still readable**.
+
+<br>
+
+### Type Hierarchy
+
+- **Headline** (Ex. MASKIPAPS)
+    - Biggest. You may use a typeface that is **strong or bold or a different color**.
+
+- **Subtitle** (Ex. INDIE FESTIVAL)
+    - You may not need a subtitle for all designs, but it **helps to break up a large body of informatio**n having one or two lines stand out in the beginning.
+
+- **Body Copy**
+    - Contains the **smallest text size**. We will want to **make it short** and enticing for those who are interested in reading more.
+
+- **Action** (Ex. WWW.RESERVETICKET.COM)
+    - Usually at the end, has the most important job to **call the viewer to some sort of action**. Needs to be **bold or different color**. But not that big to not compete with the headline or subtitle.
+
+- See example below:
+
+![alt text](images/graphic-design-theory/2026-09-01_12-28.png)
+
+<br>
+
+### Font Pairing
+- Make sure the fonts you pair **have enough contrast**.
+    - **Sans Serif** & **Serif** fonts work well together.
+    - Pair all **small case letters** with **all caps**.
+    - Pair **Script** fonts with **All bold Sans Serif** fonts.
+    - Pair **Script** fonts with **Slab Serif** fonts.
+    - You have to be careful pairing 2 **Script** fonts, as this is difficult.
+- Use only **2-3** fonts per design.
+    - A good healine font.
+    - A simple body copy font.
+    - And a third complementary font for variety.
+
+![alt text](images/graphic-design-theory/2026-09-01_13-05.png)
 
 <br>
 
