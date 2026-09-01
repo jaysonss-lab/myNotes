@@ -20,6 +20,12 @@
     - [Kerning and Spacing](#kerning-and-spacing)
     - [Type Hierarchy](#type-hierarchy)
     - [Font Pairing](#font-pairing)
+* [Photography Theory](#photography-theory)
+    - [Basics of Photography](#basics-of-photography)
+    - [Compositon and Layout](#compositon-and-layout)
+    - [Typography and Photography](#typography-and-photography)
+    - [Color Theory in Photography](#color-theory-in-photography)
+    - [Where to Find Images](#where-to-find-images)
 
 ---
 <br>
@@ -415,3 +421,112 @@
 ---
 
 <br>
+
+## Photography Theory
+
+### Basics of Photography
+
+#### Exposure
+- is how much **light** is **captured** by the **camera's sensor**.
+
+![alt text](images/graphic-design-theory/2026-09-01_14-24.png)
+
+#### Aperture
+- is how much **light** can **pass** through the **camera's lens**.
+
+![alt text](images/graphic-design-theory/2026-09-01_14-27.png)
+
+#### Shutter
+- is how long the camera's **shutter** will remain **opened** or **closed**.
+
+![alt text](images/graphic-design-theory/2026-09-01_14-29.png)
+
+#### ISO
+- is how **sensitive** the camera is to **light**.
+
+![alt text](images/graphic-design-theory/2026-09-01_14-30.png)
+
+<br>
+
+### Compositon and Layout
+- The **placement of subjects** in your photos can actually change the way an image makes a **viewer feel**.
+
+#### Basic Single Focus Image
+- This is usually made when the **subject is placed in the middle of the shot** and there is nothing else.
+- **Portray information easily** as there is nothing else to look at.
+- It can help **draw attention** and **display a message boldly**.
+
+#### Visual Weight
+- Every element in a photograph or even a design carries with its visual weight.
+- By adjusting the subject matter **horizontally or vertically** in an image, you can change its visual weight.
+- A good visual weight to maintain happens when you **divide the horizontal and vertical axes of the frame into threes**.
+
+![alt text](images/graphic-design-theory/2026-09-01_14-50.png)
+
+<br>
+
+### Typography and Photography
+1. Decide what is going to be written.
+    - Typically this is provided by the client or director.
+    - If you are to decide, you need to think about how much information is going to be given in this message.
+    - Choose only 2-3 different fonts.
+
+2. Keep in mind the branding or feel that you or the client wants.
+
+3. Think about the audience who will see the design.
+
+<br>
+
+### Color Theory in Photography
+
+#### Bright & Fun Design 
+- Brighter and more saturated colors would be best.
+
+#### Serious Design / Tone
+- Choose darker or more dull colors to get your point across.
+
+#### Complementary Colors
+- Pick 2 different colors between your type and photograph.
+
+#### Contrast
+- A good contrast to use is black and white photos. Bold white texts works really well with black & white photos.
+- Don't be afraid to **use color elements in a black & white photo**, as this will help make the design elements **stand out and become your focal point**.
+- You can also adjust **bluriness** of a photograph to help provide more contrast.
+
+#### Color Overlay
+- Provide a color overlay on the photo itself. This is typically done by using a **transparent colored fill layer over your photo**.
+- You can also use a **colored gradient overlay**. 
+
+<br>
+
+### Where to Find Images
+- https://www.istockphoto.com/
+    - Some are **free** and some are **royalty-free**, which means you are buying a license to use it, not the copyright itself.
+- https://www.shutterstock.com/
+    - works the same way like **istock**.
+- https://www.canva.com/
+    - offers millions of **free images, photos, graphics, and illustrations** that you can use in your design projects. Please note that they also provide paid images, so **avoid anything marked with a Crown icon or a Dollar sign ($)**.
+
+#### Sites that provide a lot of free images:
+- https://pixabay.com/
+- https://www.pexels.com/
+- https://unsplash.com/
+- https://commons.wikimedia.org/wiki/Main_Page
+
+<br>
+
+### How to Cut Out a Subject from a Photo
+- https://pixlr.com/remove-background/
+- https://www.photoroom.com/tools/background-remover
+- https://www.adobe.com/express/feature/image/remove-background
+- https://www2.lunapic.com/editor/ (manual)
+
+**Note:** Download the **png** file for the transparent background because **jpg** files are going to give you a white background.
+
+#### Photoshop Process
+- Select -> Select and Mask... (Alt + Ctrl + R)
+- Under Properties change the view to **On Black**
+
+![alt text](images/graphic-design-theory/2026-09-01_23-13.png)
+
+- Then using the brush just paint the image that you want to stay. Press the `alt` button while brushing the parts that you exceeded.
