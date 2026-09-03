@@ -26,6 +26,11 @@
     - [Typography and Photography](#typography-and-photography)
     - [Color Theory in Photography](#color-theory-in-photography)
     - [Where to Find Images](#where-to-find-images)
+* [Layout Theory](#layout-theory)
+    - [Layout and Design](#layout-and-design)
+    - [Grids and Blocking](#grids-and-blocking)
+    - [A Detailed Study of Grids in Layout Design](#a-detailed-study-of-grids-in-layout-design)
+    - [Design Themes](#design-themes)
 
 ---
 <br>
@@ -530,3 +535,79 @@
 ![alt text](images/graphic-design-theory/2026-09-01_23-13.png)
 
 - Then using the brush just paint the image that you want to stay. Press the `alt` button while brushing the parts that you exceeded.
+
+<br>
+
+---
+
+<br>
+
+## Layout Theory
+
+### Layout and Design
+
+#### White Space
+- is the spacing between elements.
+- **large amount** of white space can continue this feeling of **openness**.
+- white space that is **tight** can spark emotions of **anxiety**.
+
+#### Margin
+- it always safe to keep text and important information **inside the margin area**.
+
+#### Design Composition
+- The **balance or overall** composition of a design is very important in **maintaining these emotional responses**.
+
+#### Focal Point
+- Maintain **one clear focal point**.
+- Having two or more competing focal points make it hard to digest the information.
+
+<br>
+
+### Grids and Blocking
+
+#### Grids
+- are amazing guides for designers.
+- they can come in many different shapes and sizes.
+- they allow us to setup even spacing between elements.
+
+#### Blocking
+- Do blocking when you try **to find the right layout** for design.
+- **Turn content into blocks**, then roughly **arrange** those on a canvas of the right size.
+
+![alt text](images/graphic-design-theory/2026-09-02_00-56.png)
+
+![alt text](images/graphic-design-theory/2026-09-02_00-57.png)
+
+#### The Golden Ratio
+- ratio of **0.618 to 0.382**
+
+![alt text](images/graphic-design-theory/2026-09-02_01-04.png)
+
+- you can flip or rotate these blocks around **as long as it maintains that ratio of division**.
+
+![alt text](images/graphic-design-theory/2026-09-02_01-06.png)
+
+![alt text](images/graphic-design-theory/2026-09-02_01-08.png)
+
+<br>
+
+### A Detailed Study of Grids in Layout Design
+- [Refer to this pdf reference (private).](https://github.com/jaysonssdev/myPrivateProjects/blob/main/myPrivateNotes/web-design-notes/GridGuide.pdf)
+
+<br>
+
+### Design Themes
+- It is essential to have a **unifying theme** throughout your design piece.
+- **Trifold** has a color and design theme on the **front** that we can carry through the **inside**.
+
+![alt text](images/graphic-design-theory/2026-09-02_15-27.png)
+
+- **Banners** should also have this **unifying theme** even if they are not together.
+
+- **Booklet, brochure, and flipbook designs** are the same way. **You want the cover and the inside spreads to all look like one design**.
+
+<br>
+
+---
+
+<br>
