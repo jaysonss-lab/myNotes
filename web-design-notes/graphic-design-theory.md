@@ -31,6 +31,11 @@
     - [Grids and Blocking](#grids-and-blocking)
     - [A Detailed Study of Grids in Layout Design](#a-detailed-study-of-grids-in-layout-design)
     - [Design Themes](#design-themes)
+* [Logo Design and Branding](#logo-design-and-branding)
+* [The Legal Side of Design - Properly Using Fonts, Photos, and Resources](#the-legal-side-of-design---properly-using-fonts-photos-and-resources)
+    - [Fonts](#fonts)
+    - [Photos](#photos)
+    - [Resources](#resources)
 
 ---
 <br>
@@ -611,3 +616,73 @@
 ---
 
 <br>
+
+## Logo Design and Branding
+
+- The look & feel of a logo **must match the company's mission statement beliefs, target audience, and style**.
+
+- **Strong logo designs** have the following characteristics:
+    - They have **balance between symbols, type, and elements**. Not all logos need symbols, some are just typographic elements. Some logos are made with unique custom typefaces designed solely for use of that particular brand. They are recognizable using only part of the logo design.
+    - They **do not depend on color** to be effective, this makes the logo more versatile and adaptable.
+    - They **work well on a wide variety of applications**. Can the logo adapt to a small 48 x 48 pixels square and still be recognizable? A logo needs to be able to be seen from a distance and still be recognizable.
+    - They **can stand the test of time**. It should adapt to future designs and needs. **Avoid popular trends today**, as it may not be trendy in the future.
+    - They **use negative space to their advantage**.
+    - They are **liked by the company's target audience**.
+    - **People can read the logo**.
+    - They are as **unique** as the company.
+
+<br>
+
+---
+
+<br>
+
+## The Legal Side of Design - Properly Using Fonts, Photos, and Resources
+
+### Fonts
+
+#### Open Font Licensing
+- Provides the user **free use of fonts**
+- Example: https://fonts.google.com/
+
+#### Purchased Licensing
+- **EULA** (End-User License Agreement)
+- If your client purchased a font to use in their branding package, and if you're a freelance designer, that means you also need to purchase a license for that font and charge it to the client.
+- Example: https://www.typography.com/
+
+#### Font Subscription
+- You'll pay monthy or yearly.
+- If you are subscribed and the client will use that font, they should also subscribed.
+- Example: https://fonts.adobe.com/?ref=tk.com
+
+<br>
+
+### Photos
+
+#### Creative Commons
+- **Free to use** - no attribution required.
+
+![alt text](images/graphic-design-theory/2026-09-03_13-59.png)
+
+- Examples: (Note: Most photos are free but some are paid)
+    - https://www.pexels.com/
+    - https://pixabay.com/
+
+#### Paid Stock Photos
+- It depends on the owner on how they want to sell their photos.
+- **Standard License** and **Extended License**
+
+![alt text](images/graphic-design-theory/2026-09-03_14-02.png)
+
+Note: Always double-check the license of a free downloaded template to make sure the photo is covered or as an open creative commons photo.
+
+<br>
+
+### Resources
+- Licensing for graphic resources function in a similar way to photos. Like **Standard License** and **Extended License**.
+
+#### Free Resources
+- Example: https://www.magnific.com/ (Note: Most of the resources are free, but some are paid.)
+
+#### Paid Resources
+- Example: https://creativemarket.com/
