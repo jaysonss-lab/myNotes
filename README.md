@@ -16,6 +16,7 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 * [OSINT Notes](#-osint-notes)
 * [AI Notes](#-ai-notes)
 * [n8n Notes](#️-n8n-notes)
+* [Web Design Notes](#-web-design-notes)
 
 ---
 
@@ -71,6 +72,7 @@ Welcome to my personal repository of study notes, summaries, and quick reference
 
 ## 🌐 Web Design Notes
 * [graphic-design-theory.md](./web-design-notes/graphic-design-theory.md)
+* [ui-ux-design-principles.md](./web-design-notes/ui-ux-design-principles.md)
 
 ---
 
